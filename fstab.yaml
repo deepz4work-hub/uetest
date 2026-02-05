@@ -1,5 +1,5 @@
 mountpoints:
   /:
-    url: "https://author-p130360-e1272151.adobeaemcloud.com/bin/franklin.delivery/dprabhu/dprabhusite/home"
+    url: "https://author-p99952-e1559416.adobeaemcloud.com/bin/franklin.delivery/dprabhu/dprabhusite/home"
     type: "markup"
     suffix: ".html"

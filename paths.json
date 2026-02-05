@@ -1,10 +1,10 @@
 {
   "mappings": [
-    "/content/dprabhusite1/:/",
-    "/content/dprabhusite1/configuration:/.helix/config.json",
-    "/content/dprabhusite1/metadata:/metadata.json"
+    "/content/dprabhusite2/:/",
+    "/content/dprabhusite2/configuration:/.helix/config.json",
+    "/content/dprabhusite2/metadata:/metadata.json"
   ],
   "includes": [
-    "/content/dprabhusite1/"
+    "/content/dprabhusite2/"
   ]
 }

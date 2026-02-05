@@ -1,10 +1,10 @@
 {
   "mappings": [
-    "/content/uetest/:/",
-    "/content/uetest/configuration:/.helix/config.json",
-    "/content/uetest/metadata:/metadata.json"
+    "/content/dprabhusite/:/",
+    "/content/dprabhusite/configuration:/.helix/config.json",
+    "/content/dprabhusite/metadata:/metadata.json"
   ],
   "includes": [
-    "/content/uetest/"
+    "/content/dprabhusite/"
   ]
 }

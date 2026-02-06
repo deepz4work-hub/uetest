@@ -37,7 +37,7 @@
       "id": "accordion-item",
       "fields": [
         {
-          "component": "textfield",
+          "component": "text-input",
           "name": "title",
           "label": "Title",
           "valueType": "string"

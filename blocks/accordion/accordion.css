@@ -1,0 +1,35 @@
+.accordion {
+  border-top: 1px solid #ddd;
+}
+
+.accordion > div {
+  border-bottom: 1px solid #ddd;
+}
+
+.accordion-title {
+  width: 100%;
+  padding: 1rem;
+  background: none;
+  border: 0;
+  text-align: left;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  position: relative;
+}
+
+.accordion-title::after {
+  content: '+';
+  position: absolute;
+  right: 1rem;
+  font-size: 1.25rem;
+}
+
+.accordion-title[aria-expanded="true"]::after {
+  content: '–';
+}
+
+.accordion-panel {
+  padding: 0 1rem 1rem;
+  line-height: 1.6;
+}

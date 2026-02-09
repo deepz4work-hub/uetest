@@ -149,17 +149,6 @@
           "name": "video",
           "label": "Video",
           "multi": false
-        },
-        {
-          "component": "reference",
-          "name": "placeholder",
-          "label": "Placeholder Image",
-          "multi": false
-        },
-        {
-          "component": "checkbox",
-          "name": "autoplay",
-          "label": "Autoplay"
         }
       ]
     },

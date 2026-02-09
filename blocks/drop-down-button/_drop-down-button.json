@@ -1,0 +1,71 @@
+{
+  "definitions": [
+    {
+      "title": "DropdownButton",
+      "id": "drop-down-button",
+      "plugins": {
+        "xwalk": {
+          "page": {
+            "resourceType": "core/franklin/components/block/v1/block",
+            "template": {
+              "name": "DropdownButton",
+              "filter": "drop-down-button"
+            }
+          }
+        }
+      }
+    },
+    {
+      "title": "DropdownButtonItem",
+      "id": "drop-down-button-item",
+      "plugins": {
+        "xwalk": {
+          "page": {
+            "resourceType": "core/franklin/components/block/v1/block/item",
+            "template": {
+              "name": "DropdownButtonItem",
+              "model": "drop-down-button-item"
+            }
+          }
+        }
+      }
+    }
+  ],
+
+  "models": [
+    {
+      "id": "drop-down-button-item",
+      "fields": [
+        {
+          "component": "text-input",
+          "name": "text",
+          "label": "Label",
+          "valueType": "string"
+        },
+        {
+          "component": "aem-content",
+          "name": "link",
+          "label": "Link"
+        },
+        {
+          "component": "select",
+          "name": "target",
+          "label": "Target",
+          "options": [
+            { "name": "Same Tab", "value": "_self" },
+            { "name": "New Tab", "value": "_blank" }
+          ]
+        }
+      ]
+    }
+  ],
+
+  "filters": [
+    {
+      "id": "drop-down-button",
+      "components": [
+        "drop-down-button-item"
+      ]
+    }
+  ]
+}

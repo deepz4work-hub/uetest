@@ -15,7 +15,10 @@
       "hero",
       "cards",
       "columns",
-      "fragment"
+      "fragment",
+      "accordion",
+      "accordion-item",
+      "drop-down-button"
     ]
   },
   {
@@ -38,5 +41,16 @@
       "button",
       "title"
     ]
-  }
-]
+  },
+   {
+      "id": "drop-down-button",
+      "components": [
+        "drop-down-button-item"
+      ]
+    },
+  {
+    "id": "accordion",
+    "components": [
+      "accordion-item"
+    ]
+  }]

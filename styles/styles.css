@@ -266,3 +266,12 @@ div[data-aue-label="text1"]
     color: #e4032e;
     line-height: 1.5;
 }
+div[data-aue-label="2ColSection"] p{
+font-size: 3.125rem;
+    color: red;
+}
+div[data-aue-label="2ColSection"] a
+{    background: transparent;
+    border-color: #e4032e38;
+    border-radius: 0;
+    color: black;}

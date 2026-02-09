@@ -266,7 +266,7 @@ div[data-aue-label="text1"]
     color: #e4032e;
     line-height: 1.5;
 }
-div[data-aue-label="2ColSection"] p{
+div[data-aue-label="2ColSection"] div:first-child p{
 font-size: 3.125rem;
     color: red;
 }

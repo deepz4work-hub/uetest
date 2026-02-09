@@ -285,7 +285,7 @@
         "multi": false
       },
       {
-        "component": "checkbox",
+        "component": "input-checkbox",
         "valueType": "boolean",
         "name": "autoplay",
         "label": "Autoplay",

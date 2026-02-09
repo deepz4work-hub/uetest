@@ -26,6 +26,13 @@
           "name": "video",
           "label": "Video",
           "multi": false
+        },
+        {
+          "component": "checkbox",
+          "valueType": "boolean",
+          "name": "autoplay",
+          "label": "Autoplay",
+          "default": false
         }
       ]
     }

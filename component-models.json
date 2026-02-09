@@ -160,52 +160,16 @@
       }
     ]
   },
-  {
-    "id": "accordion-item",
-    "fields": [
-      {
-        "component": "text-input",
-        "name": "title",
-        "label": "Title",
-        "valueType": "string"
-      },
-      {
-        "component": "richtext",
-        "name": "content",
-        "label": "Content",
-        "valueType": "string"
-      },
-      {
-        "component": "reference",
-        "valueType": "string",
-        "name": "image",
-        "label": "Image",
-        "multi": false
-      }
-    ]
-  },
-  {
-      "id": "car-item",
+
+    {
+      "id": "drop-down-button-item",
       "fields": [
         {
           "component": "text-input",
-          "name": "title",
-          "label": "Title",
+          "name": "text",
+          "label": "Label",
           "valueType": "string"
-        },
-        {
-          "component": "richtext",
-          "name": "content",
-          "label": "Content",
-          "valueType": "string"
-        },
-        {
-        "component": "reference",
-        "valueType": "string",
-        "name": "image",
-        "label": "Image",
-        "multi": false
-      }
+        }
       ]
     },
   {

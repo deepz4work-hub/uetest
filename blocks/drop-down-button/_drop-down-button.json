@@ -41,21 +41,7 @@
           "name": "text",
           "label": "Label",
           "valueType": "string"
-        },
-        {
-          "component": "aem-content",
-          "name": "link",
-          "label": "Link"
-        },
-        {
-          "component": "select",
-          "name": "target",
-          "label": "Target",
-          "options": [
-            { "name": "Same Tab", "value": "_self" },
-            { "name": "New Tab", "value": "_blank" }
-          ]
-        }
+        } 
       ]
     }
   ],

@@ -27,13 +27,23 @@
           "label": "Video",
           "multi": false
         },
-        {
-          "component": "input-checkbox",
-          "valueType": "boolean",
-          "name": "autoplay",
-          "label": "Autoplay",
-          "default": false
-        }
+       {
+        "component": "select",
+        "name": "classes",
+        "value": "",
+        "label": "Autoplay",
+        "valueType": "string",
+        "options": [
+          {
+            "name": "on",
+            "value": "autoplay"
+          },
+          {
+            "name": "off",
+            "value": ""
+          }
+        ]
+      }
       ]
     }
   ],

@@ -1,9 +1,10 @@
 /* header and nav layout */
 header .nav-wrapper {
-  background-color: var(--background-color);
+  /* background-color: var(--nav-background-color); */
   width: 100%;
   z-index: 2;
   position: fixed;
+  color:var(--light-color)
 }
 
 header nav {
@@ -227,7 +228,10 @@ header nav .nav-sections ul > li > ul > li {
     gap: 24px;
     margin: 0;
   }
-
+  header nav .nav-sections .default-content-wrapper > ul {
+    display: block;
+    position: relative;
+  }
   header nav .nav-sections .default-content-wrapper > ul > li {
     flex: 0 1 auto;
     position: relative;

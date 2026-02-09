@@ -5,9 +5,6 @@
   {
     "...": "./_image.json#/models"
   },
-   {
-    "...": "./_video.json#/models"
-  },
   {
     "...": "./_title.json#/models"
   },

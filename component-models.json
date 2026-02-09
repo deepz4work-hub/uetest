@@ -40,17 +40,6 @@
     ]
   },
   {
-    "id": "video",
-    "fields": [
-      {
-        "component": "reference",
-        "name": "video",
-        "label": "Video",
-        "multi": false
-      }
-    ]
-  },
-  {
     "id": "title",
     "fields": [
       {
@@ -282,6 +271,18 @@
         "value": "",
         "label": "Text",
         "valueType": "string"
+      }
+    ]
+  },
+  {
+    "id": "video",
+    "fields": [
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "video",
+        "label": "Video",
+        "multi": false
       }
     ]
   }

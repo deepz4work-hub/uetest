@@ -48,6 +48,12 @@
         "drop-down-button-item"
       ]
     },
+     {
+      "id": "videos",
+      "components": [
+        "card"
+      ]
+    },
   {
     "id": "accordion",
     "components": [

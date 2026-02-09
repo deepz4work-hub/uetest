@@ -1,24 +1,6 @@
 {
-  "groups": [
+  "definitions": [
     {
-      "title": "Default Content",
-      "id": "default",
-      "components": [
-        {
-          "...": "./_text.json#/definitions"
-        },
-        {
-          "...": "./_title.json#/definitions"
-        },
-        {
-          "...": "./_image.json#/definitions"
-        },
-        {
-          "...": "./_button.json#/definitions"
-        }
-      ]
-    },
-     {
       "title": "Videos",
       "id": "videos",
       "plugins": {
@@ -47,23 +29,34 @@
           }
         }
       }
-    },
+    }
+  ],
+  "models": [
     {
-      "title": "Sections",
-      "id": "sections",
-      "components": [
+      "id": "video",
+      "fields": [
         {
-          "...": "./_section.json#/definitions"
+          "component": "reference",
+          "valueType": "string",
+          "name": "image",
+          "label": "Image",
+          "multi": false
+        },
+        {
+          "component": "richtext",
+          "name": "text",
+          "value": "",
+          "label": "Text",
+          "valueType": "string"
         }
       ]
-    },
+    }
+  ],
+  "filters": [
     {
-      "title": "Blocks",
-      "id": "blocks",
+      "id": "videos",
       "components": [
-        {
-          "...": "../blocks/*/_*.json#/definitions"
-        }
+        "card"
       ]
     }
   ]

@@ -141,22 +141,25 @@
       }
     ]
   },
-   {
+  {
       "id": "video",
       "fields": [
         {
           "component": "reference",
-          "valueType": "string",
-          "name": "image",
-          "label": "Image",
+          "name": "video",
+          "label": "Video",
           "multi": false
         },
         {
-          "component": "richtext",
-          "name": "text",
-          "value": "",
-          "label": "Text",
-          "valueType": "string"
+          "component": "reference",
+          "name": "placeholder",
+          "label": "Placeholder Image",
+          "multi": false
+        },
+        {
+          "component": "checkbox",
+          "name": "autoplay",
+          "label": "Autoplay"
         }
       ]
     },

@@ -20,6 +20,19 @@
   text-decoration: underline;
 }
 
+.columns-2-cols button{
+    background-color: transparent;
+    border-radius: 0;
+    color: #000;
+    border-color: #e4032e;
+}
+.columns-2-cols button:hover,.columns-2-cols button:focus,.columns-2-cols button:active
+{
+    color: #fff;
+    background-color: #e4032e;
+    border-color: #e4032e;
+}
+
 @media (max-width: 768px) {
   .two-column-wrapper {
     grid-template-columns: 1fr;

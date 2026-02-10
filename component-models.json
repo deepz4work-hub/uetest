@@ -142,6 +142,45 @@
     ]
   },
   {
+    "id": "2columncomponent",
+    "fields": [
+      {
+        "component": "h2",
+        "name": "h2",
+        "value": "",
+        "label": "Heading in first column",
+        "valueType": "string"
+      },
+      {
+        "component": "richtext",
+        "name": "text",
+        "value": "",
+        "label": "paragraph in first column",
+        "valueType": "string"
+      },
+      {
+        "component": "richtext",
+        "name": "text",
+        "value": "",
+        "label": "paragraph in second column",
+        "valueType": "string"
+      },
+      {
+        "component": "richtext",
+        "name": "text",
+        "value": "",
+        "label": "paragraph in second column",
+        "valueType": "string"
+      },
+      {
+        "component": "text",
+        "name": "linkTitle",
+        "label": "Title",
+        "valueType": "string"
+      }
+    ]
+  },
+  {
     "id": "accordion-item",
     "fields": [
       {

@@ -186,14 +186,14 @@
       },
       {
         "component": "richtext",
-        "name": "text_column_1",
+        "name": "text1",
         "value": "",
         "label": "paragraph in first column",
         "valueType": "string"
       },
       {
         "component": "richtext",
-        "name": "text_column_2",
+        "name": "text2",
         "value": "",
         "label": "paragraph in second column",
         "valueType": "string"

@@ -24,7 +24,12 @@ export default function decorate(block) {
      Title with dynamic tag
   -------------------------- */
   const titleText = rows[0]?.textContent?.trim();
-  const titleType = rows[1]?.textContent?.trim() || 'h2';
+  let current=rows[0]
+  while (current && current.children.length) {
+    current = current.children[0];
+  }
+  const titleType = current.tagName.toLowerCase()
+
 
   if (titleText) {
     const heading = document.createElement(titleType);
@@ -32,11 +37,18 @@ export default function decorate(block) {
     col1.append(heading);
   }
 
-  /* -------------------------
+   /* -------------------------
      Column 1 text
   -------------------------- */
+  if (rows[1]) {
+    col1.append(rows[1]);
+  }
+
+  /* -------------------------
+     Column 2 text
+  -------------------------- */
   if (rows[2]) {
-    col1.append(rows[2]);
+    col2.append(rows[2]);
   }
 
   /* -------------------------

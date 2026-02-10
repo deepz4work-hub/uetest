@@ -166,16 +166,9 @@
         "valueType": "string"
       },
       {
-        "component": "richtext",
-        "name": "text",
-        "value": "",
-        "label": "paragraph in second column",
-        "valueType": "string"
-      },
-      {
         "component": "text",
         "name": "linkTitle",
-        "label": "Title",
+        "label": "link in second column",
         "valueType": "string"
       }
     ]

@@ -1,0 +1,27 @@
+.two-column-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.column-1 h1,
+.column-1 h2,
+.column-1 h3,
+.column-1 h4,
+.column-1 h5,
+.column-1 h6 {
+  margin-bottom: 1rem;
+}
+
+.column-link {
+  display: inline-block;
+  margin-top: 1rem;
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .two-column-wrapper {
+    grid-template-columns: 1fr;
+  }
+}

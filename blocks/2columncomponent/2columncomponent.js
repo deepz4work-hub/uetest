@@ -2,6 +2,15 @@ export default function decorate(block) {
   const rows = [...block.children];
   block.innerHTML = '';
 
+  /*
+    Model order:
+    0 → title
+    1 → titleType
+    2 → text_column_1
+    3 → text_column_2
+    4 → linkTitle
+  */
+
   const wrapper = document.createElement('div');
   wrapper.className = 'two-column-wrapper';
 
@@ -11,29 +20,42 @@ export default function decorate(block) {
   const col2 = document.createElement('div');
   col2.className = 'column column-2';
 
-  /*
-    Model order:
-    0 → h2 (column 1)
-    1 → richtext (column 1)
-    2 → richtext (column 2)
-    3 → linkTitle (column 2)
-  */
+  /* -------------------------
+     Title with dynamic tag
+  -------------------------- */
+  const titleText = rows[0]?.textContent?.trim();
+  const titleType = rows[1]?.textContent?.trim() || 'h2';
 
-  if (rows[0]) col1.append(rows[0]);
-  if (rows[1]) col1.append(rows[1]);
+  if (titleText) {
+    const heading = document.createElement(titleType);
+    heading.textContent = titleText;
+    col1.append(heading);
+  }
 
-  if (rows[2]) col2.append(rows[2]);
+  /* -------------------------
+     Column 1 text
+  -------------------------- */
+  if (rows[2]) {
+    col1.append(rows[2]);
+  }
 
-  // Link handling
+  /* -------------------------
+     Column 2 text
+  -------------------------- */
   if (rows[3]) {
-    const linkText = rows[3].textContent.trim();
-    if (linkText) {
-      const link = document.createElement('a');
-      link.href = '#'; // update if you add link URL later
-      link.textContent = linkText;
-      link.className = 'column-link';
-      col2.append(link);
-    }
+    col2.append(rows[3]);
+  }
+
+  /* -------------------------
+     Column 2 link
+  -------------------------- */
+  const linkText = rows[4]?.textContent?.trim();
+  if (linkText) {
+    const link = document.createElement('a');
+    link.textContent = linkText;
+    link.href = '#'; // extend later for URL support
+    link.className = 'column-link';
+    col2.append(link);
   }
 
   wrapper.append(col1, col2);

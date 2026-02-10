@@ -142,7 +142,7 @@
     ]
   },
   {
-    "id": "2columncomponent",
+    "id": "2columncomponant",
     "fields": [
       {
         "component": "text-input",

@@ -84,14 +84,14 @@
       "components": [
         {
           "title": "2ColumnComponant",
-          "id": "2columncomponent",
+          "id": "2columncomponant",
           "plugins": {
             "xwalk": {
               "page": {
                 "resourceType": "core/franklin/components/block/v1/block",
                 "template": {
                   "name": "2ColumnComponant",
-                  "model": "2columncomponent"
+                  "model": "2columncomponant"
                 }
               }
             }

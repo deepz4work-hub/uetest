@@ -61,5 +61,15 @@
     "components": [
       "drop-down-button-item"
     ]
+  },
+  {
+    "id": "singleslider",
+    "components": [
+      "accordion-item"
+    ]
+  },
+  {
+    "id": "slideritem",
+    "components": []
   }
 ]

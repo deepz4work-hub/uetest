@@ -340,7 +340,7 @@
     ]
   },
   {
-    "id": "singleslider",
+    "id": "slideritem",
     "fields": [
       {
         "component": "text",

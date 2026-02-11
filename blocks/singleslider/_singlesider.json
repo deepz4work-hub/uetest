@@ -14,11 +14,26 @@
           }
         }
       }
+    },
+     {
+      "title": "slideritem",
+      "id": "slideritem",
+      "plugins": {
+        "xwalk": {
+          "page": {
+            "resourceType": "core/franklin/components/block/v1/block/item",
+            "template": {
+              "name": "slideritem",
+              "model": "slideritem"
+            }
+          }
+        }
+      }
     }
   ],
   "models": [
     {
-      "id": "singleslider",
+      "id": "slideritem",
       "fields": [
         {
           "component": "text",
@@ -44,5 +59,18 @@
       ]
     }
   ],
-  "filters": []
+  "filters": [
+     {
+      "id": "singleslider",
+      "components": [
+        "accordion-item"
+      ]
+    },
+    {
+      "id": "slideritem",
+      "components": [
+         
+      ]
+    }
+  ]
 }

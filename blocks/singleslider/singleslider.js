@@ -1,30 +1,20 @@
+
 export default async function decorate(block) {
+
+  const module = await import('../../scripts/splide/splide.js');
+  const Splide = module.default;
+
+  console.log(Splide)
   const rows = [...block.children];
   block.textContent = '';
 
   if (!rows.length) return;
 
-  // ✅ Load Splide correctly
-  if (!window.Splide) {
-    await import('https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js');
-  }
+  const picture = rows.find(r => r.querySelector('picture'))?.querySelector('picture');
+  if (!picture) return;
 
-  const wrapper = document.createElement('div');
-  wrapper.className = 'slider-wrapper';
-
-  const textWrapper = document.createElement('div');
-  textWrapper.className = 'text-wrapper';
-
-  // ✅ Find picture safely (first available)
-  const picture = block.querySelector('picture');
-  if (!picture) {
-    console.warn('No picture found for slider');
-    return;
-  }
-
-  // Splide structure
-  const splide = document.createElement('div');
-  splide.className = 'splide';
+  const splideEl = document.createElement('div');
+  splideEl.className = 'splide';
 
   const track = document.createElement('div');
   track.className = 'splide__track';
@@ -32,7 +22,6 @@ export default async function decorate(block) {
   const list = document.createElement('ul');
   list.className = 'splide__list';
 
-  // Create slides
   for (let i = 0; i < 3; i += 1) {
     const slide = document.createElement('li');
     slide.className = 'splide__slide';
@@ -41,21 +30,11 @@ export default async function decorate(block) {
   }
 
   track.append(list);
-  splide.append(track);
-  textWrapper.append(splide);
+  splideEl.append(track);
+  block.append(splideEl);
 
-  // Append text columns correctly
-  if (rows[2]) wrapper.append(rows[2]);
-  if (rows[3]) wrapper.append(rows[3]);
-
-  wrapper.append(textWrapper);
-  block.append(wrapper);
-
-  // ✅ Mount Splide
-  new window.Splide(splide, {
+  new Splide(splideEl, {
     type: 'loop',
     perPage: 1,
-    arrows: true,
-    pagination: true,
   }).mount();
 }

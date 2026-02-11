@@ -1,14 +1,19 @@
-export default function decorate(block) {
+export default async function decorate(block) {
   const rows = [...block.children];
   block.textContent = '';
+
+  if (!rows.length) return;
+
+  // ✅ Load Splide safely (CSP compliant)
+  if (!window.Splide) {
+    await import('https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js');
+  }
 
   const wrapper = document.createElement('div');
   wrapper.className = 'slider-wrapper';
 
   const textWrapper = document.createElement('div');
   textWrapper.className = 'text-wrapper';
-
-  if (!rows.length) return;
 
   const picture = rows[0].querySelector('picture');
   if (!picture) return;
@@ -23,12 +28,11 @@ export default function decorate(block) {
   const list = document.createElement('ul');
   list.className = 'splide__list';
 
-  // Create slides (example: 3 slides)
+  // Create slides
   for (let i = 0; i < 3; i += 1) {
     const slide = document.createElement('li');
     slide.className = 'splide__slide';
-
-    slide.append(picture.cloneNode(true)); // ✅ full <picture>
+    slide.append(picture.cloneNode(true));
     list.append(slide);
   }
 
@@ -42,4 +46,12 @@ export default function decorate(block) {
 
   wrapper.append(textWrapper);
   block.append(wrapper);
+
+  // ✅ Mount Splide
+  new window.Splide(splide, {
+    type: 'loop',
+    perPage: 1,
+    arrows: true,
+    pagination: true,
+  }).mount();
 }

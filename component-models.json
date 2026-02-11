@@ -231,30 +231,6 @@
     ]
   },
   {
-    "id": "car-item",
-    "fields": [
-      {
-        "component": "text-input",
-        "name": "title",
-        "label": "Title",
-        "valueType": "string"
-      },
-      {
-        "component": "richtext",
-        "name": "content",
-        "label": "Content",
-        "valueType": "string"
-      },
-      {
-        "component": "reference",
-        "valueType": "string",
-        "name": "image",
-        "label": "Image",
-        "multi": false
-      }
-    ]
-  },
-  {
     "id": "card",
     "fields": [
       {

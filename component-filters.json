@@ -31,9 +31,7 @@
   },
   {
     "id": "accordion-item",
-    "components": [
-      "car-item"
-    ]
+    "components": []
   },
   {
     "id": "cards",

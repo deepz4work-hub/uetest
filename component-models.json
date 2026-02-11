@@ -316,6 +316,10 @@
     ]
   },
   {
+    "id": "singleslider",
+    "fields": []
+  },
+  {
     "id": "singleslider-item",
     "fields": [
       {

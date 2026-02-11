@@ -31,11 +31,11 @@ export default function decorate(block) {
   const titleType = current.tagName.toLowerCase()
 
 
-  if (titleText) {
-    const heading = document.createElement(titleType);
-    heading.textContent = titleText;
-    col1.append(heading);
-  }
+    if (titleText) {
+      const heading = document.createElement(titleType);
+      heading.textContent = titleText;
+      col1.append(heading);
+    }
 
    /* -------------------------
      Column 1 text
@@ -48,20 +48,17 @@ export default function decorate(block) {
      Column 2 text
   -------------------------- */
   if (rows[2]) {
+    
+   
     col2.append(rows[2]);
+     col2.innerHTML += '<p>&nbsp;</p>';
   }
 
-  /* -------------------------
-     Column 2 text
-  -------------------------- */
-  if (rows[3]) {
-    col2.append(rows[3]);
-  }
 
-  /* -------------------------
-     Column 2 link
-  -------------------------- */
-  const linkText = rows[4]?.textContent?.trim();
+  // /* -------------------------
+  //    Column 2 link
+  // -------------------------- */
+  const linkText = rows[3]?.textContent?.trim();
   if (linkText) {
     const link = document.createElement('a');
     link.textContent = linkText;

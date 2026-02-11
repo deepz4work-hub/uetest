@@ -14,17 +14,35 @@
 }
 
 .column-link {
-  display: inline-block;
-  margin-top: 1rem;
-  font-weight: 600;
-  text-decoration: underline;
+   background-color: transparent;
+    border-radius: 0;
+    color: #e4032e !important;
+     border: 1px solid #e4032e;
+     padding:5px 10px;
 }
 
-.columns-2-cols .button{
-    background-color: transparent;
-    border-radius: 0;
-    color: #000;
-    border-color: #e4032e;
+.two-column-wrapper p{
+font-family: "Overpass", Roboto, "Helvetica Neue", Arial, sans-serif;
+    font-size: 1.25rem;
+    font-weight: 300;
+    line-height: 1.4;
+    margin-bottom: 1.5rem;
+}
+.two-column-wrapper h2{
+  color: #e4032e !important;
+      margin-bottom: 0.5rem;
+    font-weight: 700;
+    line-height: 1.2;
+    font-size: 3.125rem;
+    margin-top:0.5rem;
+    text-transform: uppercase;
+}
+.two-column-wrapper h3{
+  
+    text-transform: uppercase;
+        font-size: 1.875rem;
+        font-weight: 700;
+    line-height: 1.2;
 }
 .columns-2-cols .button:hover,.columns-2-cols .button:focus,.columns-2-cols .button:active
 {

@@ -256,8 +256,8 @@
               "page": {
                 "resourceType": "core/franklin/components/block/v1/block/item",
                 "template": {
-                  "name": "slideritem",
-                  "model": "slideritem"
+                  "name": "singleslider-item",
+                  "model": "singleslider-item"
                 }
               }
             }

@@ -343,7 +343,7 @@
     "id": "singleslider",
     "fields": [
       {
-        "component": "text-input",
+        "component": "text",
         "name": "title",
         "value": "",
         "label": "Heading",

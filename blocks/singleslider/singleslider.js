@@ -1,33 +1,45 @@
 export default function decorate(block) {
   const rows = [...block.children];
-  block.innerHTML = '';
-
-  /*
-    Model order:
-    0 → title
-    1 → titleType
-    2 → text_column_1
-    3 → text_column_2
-    4 → linkTitle
-  */
+  block.textContent = '';
 
   const wrapper = document.createElement('div');
   wrapper.className = 'slider-wrapper';
-   const textWrapper = document.createElement('div');
-    textWrapper.className = 'text-wrapper';
 
+  const textWrapper = document.createElement('div');
+  textWrapper.className = 'text-wrapper';
 
-    if(rows.length>0)
-    {
-        if(rows[0])
-            textWrapper.append(rows[0]);
-        if(rows[1])
-            textWrapper.append(rows[1]);
-        if(rows[2])
-            wrapper.append(rows[2]);
-        wrapper.append(textWrapper);
+  if (!rows.length) return;
 
-    }
+  const picture = rows[0].querySelector('picture');
+  if (!picture) return;
 
+  // Splide structure
+  const splide = document.createElement('div');
+  splide.className = 'splide';
+
+  const track = document.createElement('div');
+  track.className = 'splide__track';
+
+  const list = document.createElement('ul');
+  list.className = 'splide__list';
+
+  // Create slides (example: 3 slides)
+  for (let i = 0; i < 3; i += 1) {
+    const slide = document.createElement('li');
+    slide.className = 'splide__slide';
+
+    slide.append(picture.cloneNode(true)); // ✅ full <picture>
+    list.append(slide);
+  }
+
+  track.append(list);
+  splide.append(track);
+  textWrapper.append(splide);
+
+  if (rows[2]) {
+    wrapper.append(rows[2]);
+  }
+
+  wrapper.append(textWrapper);
   block.append(wrapper);
 }

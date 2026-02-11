@@ -316,7 +316,7 @@
     ]
   },
   {
-    "id": "slideritem",
+    "id": "singleslider-item",
     "fields": [
       {
         "component": "text",

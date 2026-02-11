@@ -63,11 +63,11 @@
   {
     "id": "singleslider",
     "components": [
-      "slideritem"
+      "singleslider-item"
     ]
   },
   {
-    "id": "slideritem",
+    "id": "singleslider-item",
     "components": []
   }
 ]

@@ -16,8 +16,8 @@
       }
     },
      {
-      "title": "slideritem",
-      "id": "slideritem",
+      "title": "singleslider-item",
+      "id": "singleslider-item",
       "plugins": {
         "xwalk": {
           "page": {
@@ -33,7 +33,7 @@
   ],
   "models": [
     {
-      "id": "slideritem",
+      "id": "singleslider-item",
       "fields": [
         {
           "component": "text",
@@ -63,11 +63,11 @@
      {
       "id": "singleslider",
       "components": [
-        "slideritem"
+        "singleslider-item"
       ]
     },
     {
-      "id": "slideritem",
+      "id": "singleslider-item",
       "components": [
          
       ]

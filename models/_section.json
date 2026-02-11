@@ -52,7 +52,10 @@
         "columns",
         "fragment",
         "accordion",
-        "drop-down-button"
+        "drop-down-button",
+        "video",
+        "2columncomponant",
+        "singleslider"
       ]
     }
   ]

@@ -142,20 +142,66 @@
     ]
   },
   {
-    "id": "card",
+    "id": "2columncomponant",
     "fields": [
       {
-        "component": "reference",
+        "component": "text-input",
+        "name": "title",
+        "value": "",
+        "label": "Title",
+        "valueType": "string"
+      },
+      {
+        "component": "select",
+        "name": "titleType",
+        "value": "h2",
+        "label": "Type",
         "valueType": "string",
-        "name": "image",
-        "label": "Image",
-        "multi": false
+        "options": [
+          {
+            "name": "h1",
+            "value": "h1"
+          },
+          {
+            "name": "h2",
+            "value": "h2"
+          },
+          {
+            "name": "h3",
+            "value": "h3"
+          },
+          {
+            "name": "h4",
+            "value": "h4"
+          },
+          {
+            "name": "h5",
+            "value": "h5"
+          },
+          {
+            "name": "h6",
+            "value": "h6"
+          }
+        ]
       },
       {
         "component": "richtext",
-        "name": "text",
+        "name": "Paragraph1",
         "value": "",
-        "label": "Text",
+        "label": "paragraph in first column",
+        "valueType": "string"
+      },
+      {
+        "component": "richtext",
+        "name": "Paragraph2",
+        "value": "",
+        "label": "paragraph in second column",
+        "valueType": "string"
+      },
+      {
+        "component": "text",
+        "name": "linkTitle",
+        "label": "link in second column",
         "valueType": "string"
       }
     ]
@@ -185,29 +231,48 @@
     ]
   },
   {
-      "id": "car-item",
-      "fields": [
-        {
-          "component": "text-input",
-          "name": "title",
-          "label": "Title",
-          "valueType": "string"
-        },
-        {
-          "component": "richtext",
-          "name": "content",
-          "label": "Content",
-          "valueType": "string"
-        },
-        {
+    "id": "car-item",
+    "fields": [
+      {
+        "component": "text-input",
+        "name": "title",
+        "label": "Title",
+        "valueType": "string"
+      },
+      {
+        "component": "richtext",
+        "name": "content",
+        "label": "Content",
+        "valueType": "string"
+      },
+      {
         "component": "reference",
         "valueType": "string",
         "name": "image",
         "label": "Image",
         "multi": false
       }
-      ]
-    },
+    ]
+  },
+  {
+    "id": "card",
+    "fields": [
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "image",
+        "label": "Image",
+        "multi": false
+      },
+      {
+        "component": "richtext",
+        "name": "text",
+        "value": "",
+        "label": "Text",
+        "valueType": "string"
+      }
+    ]
+  },
   {
     "id": "columns",
     "fields": [
@@ -224,6 +289,17 @@
         "name": "rows",
         "value": "",
         "label": "Rows"
+      }
+    ]
+  },
+  {
+    "id": "drop-down-button-item",
+    "fields": [
+      {
+        "component": "text-input",
+        "name": "text",
+        "label": "Label",
+        "valueType": "string"
       }
     ]
   },
@@ -260,6 +336,61 @@
         "value": "",
         "label": "Text",
         "valueType": "string"
+      }
+    ]
+  },
+  {
+    "id": "singleslider",
+    "fields": [
+      {
+        "component": "text",
+        "name": "title",
+        "value": "",
+        "label": "Heading",
+        "valueType": "string"
+      },
+      {
+        "component": "richtext",
+        "name": "Paragraph1",
+        "value": "",
+        "label": "Description",
+        "valueType": "string"
+      },
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "image",
+        "label": "Image",
+        "multi": false
+      }
+    ]
+  },
+  {
+    "id": "video",
+    "fields": [
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "video",
+        "label": "Video",
+        "multi": false
+      },
+      {
+        "component": "select",
+        "name": "classes",
+        "value": "",
+        "label": "Autoplay",
+        "valueType": "string",
+        "options": [
+          {
+            "name": "on",
+            "value": "autoplay"
+          },
+          {
+            "name": "off",
+            "value": ""
+          }
+        ]
       }
     ]
   }

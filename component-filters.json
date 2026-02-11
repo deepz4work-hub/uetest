@@ -17,8 +17,22 @@
       "columns",
       "fragment",
       "accordion",
-      "accordion-item",
-      "drop-down-button"
+      "drop-down-button",
+      "video",
+      "2columncomponant",
+      "singleslider"
+    ]
+  },
+  {
+    "id": "accordion",
+    "components": [
+      "accordion-item"
+    ]
+  },
+  {
+    "id": "accordion-item",
+    "components": [
+      "car-item"
     ]
   },
   {
@@ -42,15 +56,10 @@
       "title"
     ]
   },
-   {
-      "id": "drop-down-button",
-      "components": [
-        "drop-down-button-item"
-      ]
-    },
   {
-    "id": "accordion",
+    "id": "drop-down-button",
     "components": [
-      "accordion-item"
+      "drop-down-button-item"
     ]
-  }]
+  }
+]

@@ -83,65 +83,20 @@
       "id": "blocks",
       "components": [
         {
-          "title": "Cards",
-          "id": "cards",
+          "title": "2ColumnComponant",
+          "id": "2columncomponant",
           "plugins": {
             "xwalk": {
               "page": {
                 "resourceType": "core/franklin/components/block/v1/block",
                 "template": {
-                  "name": "Cards",
-                  "filter": "cards"
+                  "name": "2ColumnComponant",
+                  "model": "2columncomponant"
                 }
               }
             }
           }
         },
-        {
-          "title": "Card",
-          "id": "card",
-          "plugins": {
-            "xwalk": {
-              "page": {
-                "resourceType": "core/franklin/components/block/v1/block/item",
-                "template": {
-                  "name": "Card",
-                  "model": "card"
-                }
-              }
-            }
-          }
-        },
-          {
-      "title": "DropdownButton",
-      "id": "drop-down-button",
-      "plugins": {
-        "xwalk": {
-          "page": {
-            "resourceType": "core/franklin/components/block/v1/block",
-            "template": {
-              "name": "DropdownButton",
-              "filter": "drop-down-button"
-            }
-          }
-        }
-      }
-    },
-    {
-      "title": "DropdownButtonItem",
-      "id": "drop-down-button-item",
-      "plugins": {
-        "xwalk": {
-          "page": {
-            "resourceType": "core/franklin/components/block/v1/block/item",
-            "template": {
-              "name": "DropdownButtonItem",
-              "model": "drop-down-button-item"
-            }
-          }
-        }
-      }
-    },
         {
           "title": "Accordion",
           "id": "accordion",
@@ -174,6 +129,51 @@
           }
         },
         {
+          "title": "Car Item",
+          "id": "car-item",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block/item",
+                "template": {
+                  "name": "Car Item",
+                  "model": "car-item"
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "Cards",
+          "id": "cards",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block",
+                "template": {
+                  "name": "Cards",
+                  "filter": "cards"
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "Card",
+          "id": "card",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block/item",
+                "template": {
+                  "name": "Card",
+                  "model": "card"
+                }
+              }
+            }
+          }
+        },
+        {
           "title": "Columns",
           "id": "columns",
           "plugins": {
@@ -183,6 +183,36 @@
                 "template": {
                   "columns": "2",
                   "rows": "1"
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "DropdownButton",
+          "id": "drop-down-button",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block",
+                "template": {
+                  "name": "DropdownButton",
+                  "filter": "drop-down-button"
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "DropdownButtonItem",
+          "id": "drop-down-button-item",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block/item",
+                "template": {
+                  "name": "DropdownButtonItem",
+                  "model": "drop-down-button-item"
                 }
               }
             }
@@ -219,15 +249,30 @@
           }
         },
         {
-          "title": "Car Item",
-          "id": "car-item",
+          "title": "singleslider",
+          "id": "singleslider",
           "plugins": {
             "xwalk": {
               "page": {
-                "resourceType": "core/franklin/components/block/v1/block/item",
+                "resourceType": "core/franklin/components/block/v1/block",
                 "template": {
-                  "name": "Car Item",
-                  "model": "car-item"
+                  "name": "singleslider",
+                  "model": "singleslider"
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "Video",
+          "id": "video",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block",
+                "template": {
+                  "name": "Video",
+                  "model": "video"
                 }
               }
             }

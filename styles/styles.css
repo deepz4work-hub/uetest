@@ -87,7 +87,8 @@ body.appear {
 }
 
 header {
-  height: var(--nav-height);
+  /* height: var(--nav-height); */
+  height: auto;
 }
 
 header .header,
@@ -257,3 +258,21 @@ main .section.highlight {
   margin: 0;
   padding: 40px 0;
 }
+/* customizing */
+div[data-aue-label="text1"]
+{    font-size: 3.125rem;
+    padding-right: 50%;
+    font-weight: 700;
+    color: #e4032e;
+    line-height: 1.5;
+}
+div[data-aue-label="2ColSection"] div:first-child h2{
+font-size: 3.125rem;
+    color: #e4032e;
+}
+
+div[data-aue-label="2ColSection"] div[data-aue-label="Column"]:first-child p
+{    background: transparent;
+    border-color: #e4032e38;
+    border-radius: 0;
+    color: black;}

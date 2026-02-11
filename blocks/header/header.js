@@ -163,4 +163,60 @@ export default async function decorate(block) {
   navWrapper.className = 'nav-wrapper';
   navWrapper.append(nav);
   block.append(navWrapper);
+
+  const navTools = nav.querySelector('.nav-sections');
+  const html=`<div class="dropdown-button">
+  <button
+    class="dropdown-toggle"
+    aria-haspopup="true"
+    aria-expanded="false"
+    type="button"
+  >
+    <span class="selected-lang"></span>
+    <span class="caret">▼</span>
+  </button>
+
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="#" role="menuitem" data-lang="EN">English</a>
+    </li>
+    <li>
+      <a href="#" role="menuitem" data-lang="Du">Deutsch</a>
+    </li>
+  </ul>
+</div>
+`;
+navTools.innerHTML=html;
+   const dropdown = document.querySelector('.dropdown-button');
+  const toggle = dropdown.querySelector('.dropdown-toggle');
+  const label = dropdown.querySelector('.selected-lang');
+  const menu = dropdown.querySelector('.dropdown-menu');
+
+  // Toggle dropdown
+  toggle.addEventListener('click', () => {
+    const expanded = toggle.getAttribute('aria-expanded') === 'true';
+    toggle.setAttribute('aria-expanded', !expanded);
+    menu.style.display = expanded ? 'none' : 'block';
+  });
+
+  // Handle item click
+  dropdown.querySelectorAll('.dropdown-menu a').forEach(item => {
+    item.addEventListener('click', (e) => {
+      e.preventDefault();
+
+      const lang = item.dataset.lang; // EN / DE
+      label.textContent = lang;       // Update button text
+
+      menu.style.display = 'none';
+      toggle.setAttribute('aria-expanded', 'false');
+    });
+  });
+
+  // Close on outside click
+  document.addEventListener('click', (e) => {
+    if (!dropdown.contains(e.target)) {
+      menu.style.display = 'none';
+      toggle.setAttribute('aria-expanded', 'false');
+    }
+  });
 }

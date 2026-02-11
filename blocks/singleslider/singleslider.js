@@ -1,10 +1,13 @@
-import { splide } from '../../scripts/scripts.js'
-
 export default async function decorate(block) {
   const rows = [...block.children];
   block.textContent = '';
 
   if (!rows.length) return;
+
+  // ✅ Load Splide correctly
+  if (!window.Splide) {
+    await import('https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js');
+  }
 
   const wrapper = document.createElement('div');
   wrapper.className = 'slider-wrapper';
@@ -12,8 +15,12 @@ export default async function decorate(block) {
   const textWrapper = document.createElement('div');
   textWrapper.className = 'text-wrapper';
 
-  const picture = rows[3].querySelector('picture');
-  if (!picture) return;
+  // ✅ Find picture safely (first available)
+  const picture = block.querySelector('picture');
+  if (!picture) {
+    console.warn('No picture found for slider');
+    return;
+  }
 
   // Splide structure
   const splide = document.createElement('div');
@@ -37,12 +44,10 @@ export default async function decorate(block) {
   splide.append(track);
   textWrapper.append(splide);
 
-  if (rows[0]) {
-    wrapper.append(rows[2]);
-  }
- if (rows[1]) {
-    wrapper.append(rows[2]);
-  }
+  // Append text columns correctly
+  if (rows[2]) wrapper.append(rows[2]);
+  if (rows[3]) wrapper.append(rows[3]);
+
   wrapper.append(textWrapper);
   block.append(wrapper);
 

@@ -63,7 +63,7 @@
      {
       "id": "singleslider",
       "components": [
-        "accordion-item"
+        "slideritem"
       ]
     },
     {

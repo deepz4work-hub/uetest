@@ -20,12 +20,21 @@
     {
       "id": "video",
       "fields": [
+        // {
+        //   "component": "reference",
+        //   "valueType": "string",
+        //   "name": "video",
+        //   "label": "Video",
+        //   "multi": false
+        // },
         {
-          "component": "reference",
+          "component": "custom-asset-namespace:custom-asset",
+          "configUrl": "https://1964180-msilassetpickerconf.adobeio-static.net/api/v1/web/assetpicker_config_aio/get-config",
           "valueType": "string",
           "name": "video",
-          "label": "Video",
-          "multi": false
+          "label": "Upload Video",
+          "multi": false,
+          "assetType": "video"
         },
        {
         "component": "select",

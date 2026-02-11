@@ -17,61 +17,17 @@ export default function decorate(block) {
     textWrapper.className = 'text-wrapper';
 
 
- 
+    if(rows.length>0)
+    {
+        if(rows[0])
+            textWrapper.append(rows[0]);
+        if(rows[1])
+            textWrapper.append(rows[1]);
+        if(rows[2])
+            wrapper.append(rows[2]);
+        wrapper.append(textWrapper);
 
-  const col1 = document.createElement('div');
-  col1.className = 'sliderCol1';
+    }
 
-  const col2 = document.createElement('div');
-  col2.className = 'sliderCol2';
-
-  /* -------------------------
-     Title with dynamic tag
-  -------------------------- */
-//   const titleText = rows[0]?.textContent?.trim();
-//   let current=rows[0]
-//   while (current && current.children.length) {
-//     current = current.children[0];
-//   }
-//   const titleType = current.tagName.toLowerCase()
-
-
-//     if (titleText) {
-//       const heading = document.createElement(titleType);
-//       heading.textContent = titleText;
-//       col1.append(heading);
-//     }
-
-//    /* -------------------------
-//      Column 1 text
-//   -------------------------- */
-//   if (rows[1]) {
-//     col1.append(rows[1]);
-//   }
-
-//   /* -------------------------
-//      Column 2 text
-//   -------------------------- */
-//   if (rows[2]) {
-    
-   
-//     col2.append(rows[2]);
-//      col2.innerHTML += '<p>&nbsp;</p>';
-//   }
-
-
-//   // /* -------------------------
-//   //    Column 2 link
-//   // -------------------------- */
-//   const linkText = rows[3]?.textContent?.trim();
-//   if (linkText) {
-//     const link = document.createElement('a');
-//     link.textContent = linkText;
-//     link.href = '#'; // extend later for URL support
-//     link.className = 'column-link';
-//     col2.append(link);
-//   }
-
-//   wrapper.append(col1, col2);
   block.append(wrapper);
 }

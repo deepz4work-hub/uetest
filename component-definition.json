@@ -234,14 +234,14 @@
           }
         },
         {
-          "title": "singleslider",
+          "title": "Singleslider",
           "id": "singleslider",
           "plugins": {
             "xwalk": {
               "page": {
                 "resourceType": "core/franklin/components/block/v1/block",
                 "template": {
-                  "name": "singleslider",
+                  "name": "Singleslider",
                   "model": "singleslider",
                   "filter": "singleslider"
                 }

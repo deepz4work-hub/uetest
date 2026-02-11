@@ -316,24 +316,18 @@
     ]
   },
   {
-    "id": "singleslider",
-    "fields": []
-  },
-  {
     "id": "singleslider-item",
     "fields": [
       {
-        "component": "text",
+        "component": "text-input",
         "name": "title",
-        "value": "",
-        "label": "Heading",
+        "label": "Title",
         "valueType": "string"
       },
       {
         "component": "richtext",
-        "name": "Paragraph1",
-        "value": "",
-        "label": "Description",
+        "name": "content",
+        "label": "Content",
         "valueType": "string"
       },
       {

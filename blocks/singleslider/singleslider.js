@@ -15,8 +15,13 @@ export default async function decorate(block) {
   const list = document.createElement('ul');
   list.className = 'splide__list';
 
+  const textContainer = document.createElement('div');
   rows.forEach((row) => {
     const picture = row.querySelector('picture, img');
+    const heading = `<h2>${row.children[0].textContent}</h2>`;
+
+    const description=row.children[1];
+    textContainer.append(heading, description);
     console.log(picture);
     if (!picture) return;
 
@@ -31,7 +36,7 @@ export default async function decorate(block) {
 
   track.append(list);
   splideEl.append(track);
-  block.append(splideEl);
+  block.append(splideEl, textContainer);
 
   new Splide(splideEl, {
     type: 'loop',

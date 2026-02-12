@@ -289,6 +289,12 @@
         "valueType": "string"
       },
       {
+        "component": "text-input",
+        "name": "textplaceholder",
+        "label": "Placeholder",
+        "valueType": "string"
+      },
+      {
         "component": "select",
         "name": "titleType",
         "value": "h2",
@@ -314,6 +320,10 @@
           {
             "name": "Number",
             "value": "number"
+          },
+          {
+            "name": "Date",
+            "value": "date"
           }
         ]
       },
@@ -322,6 +332,36 @@
         "name": "minLength",
         "label": "Min Length",
         "valueType": "number"
+      },
+      {
+        "component": "text-input",
+        "name": "maxLength",
+        "label": "Max Length",
+        "valueType": "number"
+      }
+    ]
+  },
+  {
+    "id": "selectcomponent",
+    "fields": [
+      {
+        "component": "text-input",
+        "name": "selectplaceholder",
+        "label": "Select Placeholder",
+        "valueType": "string"
+      },
+      {
+        "component": "label",
+        "name": "datalabel",
+        "value": "give the value in key,value pair format",
+        "label": "Data Label",
+        "valueType": "string"
+      },
+      {
+        "component": "richtext",
+        "name": "selectdata",
+        "label": "Select Data",
+        "valueType": "string"
       },
       {
         "component": "text-input",

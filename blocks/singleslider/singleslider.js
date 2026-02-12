@@ -37,9 +37,9 @@ export default async function decorate(block) {
     slide.className = 'splide__slide singleslider__slide';
     const slideWrap= document.createElement('div');
     slideWrap.className = 'singleslider__slide-wrap';
-    slideWrap.append(picture.cloneNode(true));
+    slideWrap.append(picture.cloneNode(true), textContainer);
 
-    slide.append(picture.cloneNode(true), textContainer);
+    slide.append(slideWrap);
     list.append(slide);
   });
 

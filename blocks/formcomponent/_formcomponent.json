@@ -43,12 +43,6 @@
           "valueType": "string"
         },
         {
-          "component": "checkbox",
-          "name": "content",
-          "label": "Required",
-          "valueType": "boolean"
-        },
-        {
           "component": "reference",
           "valueType": "string",
           "name": "image",

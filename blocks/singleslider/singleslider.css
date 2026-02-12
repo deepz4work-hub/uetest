@@ -1,10 +1,10 @@
 .splide__slide img {
     width:100% !important;
 }
-.singleslider__content{
+.singleslider__slide-wrap{
     position:relative;
 }
-.singleslider__content~div{
+.singleslider__content{
     position:absolute;
     top:50%;
     left:25%;

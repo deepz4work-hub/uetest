@@ -289,42 +289,6 @@
         "valueType": "string"
       },
       {
-        "component": "reference",
-        "valueType": "string",
-        "name": "image",
-        "label": "Image",
-        "multi": false
-      },
-      {
-        "component": "select",
-        "name": "titleType",
-        "value": "h2",
-        "label": "Type",
-        "valueType": "string",
-        "options": [
-          {
-            "name": "Email",
-            "value": "email"
-          },
-          {
-            "name": "Text",
-            "value": "text"
-          },
-          {
-            "name": "Phno",
-            "value": "phno"
-          },
-          {
-            "name": "Pincode",
-            "value": "pincode"
-          },
-          {
-            "name": "Number",
-            "value": "number"
-          }
-        ]
-      },
-      {
         "component": "text-input",
         "name": "minLength",
         "label": "Min Length",

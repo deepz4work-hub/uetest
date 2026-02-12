@@ -1,46 +1,39 @@
-export default function decorate(block) {
-  const items = [...block.children];
+export default async function decorate(block) {
+  const module = await import('../../scripts/splide/splide.js');
+  const Splide = module.default;
 
-  block.classList.add('singleslider');
+  const rows = [...block.children];
+  block.textContent = '';
+  if (!rows.length) return;
 
-  items.forEach((item, index) => {
-    const [titleEl, contentEl] = item.children;
+  const splideEl = document.createElement('div');
+  splideEl.className = 'splide singleslider';
 
-    if (!titleEl || !contentEl) return;
+  const track = document.createElement('div');
+  track.className = 'splide__track';
 
-    // const button = document.createElement('button');
-    // button.className = 'accordion-title';
-    // button.type = 'button';
-    // button.setAttribute('aria-expanded', 'false');
-    // button.setAttribute('aria-controls', `accordion-panel-${index}`);
-    // button.innerHTML = titleEl.innerHTML;
+  const list = document.createElement('ul');
+  list.className = 'splide__list';
 
-    // const panel = document.createElement('div');
-    // panel.className = 'accordion-panel';
-    // panel.id = `accordion-panel-${index}`;
-    // panel.setAttribute('role', 'region');
-    // panel.hidden = true;
-    // panel.innerHTML = contentEl.innerHTML;
+  rows.forEach((row) => {
+    const picture = row.querySelector('picture, img');
+    if (!picture) return;
 
-    // button.addEventListener('click', () => {
-    //   const isOpen = button.getAttribute('aria-expanded') === 'true';
+    const slide = document.createElement('li');
+    slide.className = 'splide__slide singleslider__slide';
 
-    //   // close all (single-open behavior)
-    //   block.querySelectorAll('.accordion-title').forEach((btn) => {
-    //     btn.setAttribute('aria-expanded', 'false');
-    //   });
-    //   block.querySelectorAll('.accordion-panel').forEach((p) => {
-    //     p.hidden = true;
-    //   });
-
-    //   // open current if it was closed
-    //   if (!isOpen) {
-    //     button.setAttribute('aria-expanded', 'true');
-    //     panel.hidden = false;
-    //   }
-    // });
-
-    // item.innerHTML = '';
-    // item.append(button, panel);
+    slide.append(picture.cloneNode(true));
+    list.append(slide);
   });
+
+  if (!list.children.length) return;
+
+  track.append(list);
+  splideEl.append(track);
+  block.append(splideEl);
+
+  new Splide(splideEl, {
+    type: 'loop',
+    perPage: 1,
+  }).mount();
 }

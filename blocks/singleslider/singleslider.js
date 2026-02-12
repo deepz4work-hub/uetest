@@ -18,17 +18,17 @@ export default async function decorate(block) {
   const textContainer = document.createElement('div');
   rows.forEach((row) => {
     const picture = row.querySelector('picture, img');
-    const heading = `<h2>${row.children[0].textContent}</h2>`;
+    const {heading} = `<h2>${row.children[0].textContent}</h2>`;
 
-    const description=row.children[1];
+    const {description}=row.children[1];
     textContainer.append(heading, description);
-    console.log(textContainer);
+    
     if (!picture) return;
 
     const slide = document.createElement('li');
     slide.className = 'splide__slide singleslider__slide';
-
-    slide.append(picture.cloneNode(true),textContainer.cloneNode(true));
+console.log(textContainer);
+    slide.append(picture.cloneNode(true), textContainer);
     list.append(slide);
   });
 

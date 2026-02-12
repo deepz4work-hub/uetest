@@ -220,14 +220,14 @@
           }
         },
         {
-          "title": "textComponent",
+          "title": "TextComponent",
           "id": "textComponent",
           "plugins": {
             "xwalk": {
               "page": {
                 "resourceType": "core/franklin/components/block/v1/block/item",
                 "template": {
-                  "name": "textComponent",
+                  "name": "TextComponent",
                   "model": "textcomponent"
                 }
               }

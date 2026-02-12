@@ -280,7 +280,7 @@
     ]
   },
   {
-    "id": "textComponent",
+    "id": "textcomponent",
     "fields": [
       {
         "component": "text-input",

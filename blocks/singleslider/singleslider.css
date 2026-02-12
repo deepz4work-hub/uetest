@@ -1,3 +1,21 @@
 .splide__slide img {
     width:100% !important;
 }
+.singleslider__content{
+    position:relative;
+}
+.singleslider__content~div{
+    position:absolute;
+    top:50%;
+    left:25%;
+}
+.singleslider__content h2{
+    color:red;
+    font-size:3rem;
+    font-weight: 800;
+}
+.singleslider__content p{
+    color:blue;
+    font-size:1.5rem;
+    font-weight: 500;
+}

@@ -18,10 +18,12 @@ export default async function decorate(block) {
   const textContainer = document.createElement('div');
   rows.forEach((row) => {
     const picture = row.querySelector('picture, img');
-    const {heading} = `<h2>${row.children[0].textContent}</h2>`;
+    const heading = document.createElement('h2');
+heading.textContent = row.children[0].textContent;
 
-    const {description}=row.children[1];
-    textContainer.append(heading, description);
+const description = row.children[1].cloneNode(true);
+
+textContainer.append(heading, description);
     
     if (!picture) return;
 

@@ -28,7 +28,7 @@ export default async function decorate(block) {
     const slide = document.createElement('li');
     slide.className = 'splide__slide singleslider__slide';
 
-    slide.append(picture.cloneNode(true));
+    slide.append(picture.cloneNode(true),textContainer.cloneNode(true));
     list.append(slide);
   });
 
@@ -36,7 +36,7 @@ export default async function decorate(block) {
 
   track.append(list);
   splideEl.append(track);
-  block.append(splideEl, textContainer);
+  block.append(splideEl);
 
   new Splide(splideEl, {
     type: 'loop',

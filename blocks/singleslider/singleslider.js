@@ -1,81 +1,46 @@
-export default async function decorate(block) {
-  // 1. Dynamically load Splide
-  const module = await import('../../scripts/splide/splide.js');
-  const Splide = module.default;
+export default function decorate(block) {
+  const items = [...block.children];
 
-  // Take a snapshot of the original rows
-  const rows = [...block.children];
+  block.classList.add('singleslider');
 
-  // Clear existing content to rebuild structure for Splide
-  block.textContent = '';
+  items.forEach((item, index) => {
+    const [titleEl, contentEl] = item.children;
 
-  if (!rows.length) return;
+    if (!titleEl || !contentEl) return;
 
-  // 2. Create Splide DOM structure
-  const splideEl = document.createElement('div');
-  splideEl.className = 'splide singleslider';
+    // const button = document.createElement('button');
+    // button.className = 'accordion-title';
+    // button.type = 'button';
+    // button.setAttribute('aria-expanded', 'false');
+    // button.setAttribute('aria-controls', `accordion-panel-${index}`);
+    // button.innerHTML = titleEl.innerHTML;
 
-  const track = document.createElement('div');
-  track.className = 'splide__track';
+    // const panel = document.createElement('div');
+    // panel.className = 'accordion-panel';
+    // panel.id = `accordion-panel-${index}`;
+    // panel.setAttribute('role', 'region');
+    // panel.hidden = true;
+    // panel.innerHTML = contentEl.innerHTML;
 
-  const list = document.createElement('ul');
-  list.className = 'splide__list';
+    // button.addEventListener('click', () => {
+    //   const isOpen = button.getAttribute('aria-expanded') === 'true';
 
-  // 3. Convert each authored row into a Splide slide
-  rows.forEach((row) => {
-    const slide = document.createElement('li');
-    slide.className = 'splide__slide singleslider__slide';
+    //   // close all (single-open behavior)
+    //   block.querySelectorAll('.accordion-title').forEach((btn) => {
+    //     btn.setAttribute('aria-expanded', 'false');
+    //   });
+    //   block.querySelectorAll('.accordion-panel').forEach((p) => {
+    //     p.hidden = true;
+    //   });
 
-    // We clone the row content so authoring structure is preserved
-    const slideContent = document.createElement('div');
-    slideContent.className = 'singleslider__content';
+    //   // open current if it was closed
+    //   if (!isOpen) {
+    //     button.setAttribute('aria-expanded', 'true');
+    //     panel.hidden = false;
+    //   }
+    // });
 
-    // Try to identify the authored elements (title, content, image)
-    // You can refine these selectors based on your actual HTML output.
-    const titleEl = row.querySelector('h1, h2, h3, h4, h5, h6, strong, b, p');
-    const contentEl = row.querySelector('p, div');
-    const pictureEl = row.querySelector('picture, img, a');
-
-    if (pictureEl) {
-      const mediaWrapper = document.createElement('div');
-      mediaWrapper.className = 'singleslider__image';
-      mediaWrapper.append(pictureEl.cloneNode(true));
-      slideContent.append(mediaWrapper);
-    }
-
-    if (titleEl) {
-      const titleWrapper = document.createElement('div');
-      titleWrapper.className = 'singleslider__title';
-      titleWrapper.textContent = titleEl.textContent;
-      slideContent.append(titleWrapper);
-    }
-
-    if (contentEl && contentEl !== titleEl) {
-      const contentWrapper = document.createElement('div');
-      contentWrapper.className = 'singleslider__body';
-      contentWrapper.innerHTML = contentEl.innerHTML;
-      slideContent.append(contentWrapper);
-    }
-
-    // Fallback: if we didn't detect anything, just clone the whole row
-    if (!slideContent.children.length) {
-      slideContent.append(...[...row.children].map((c) => c.cloneNode(true)));
-    }
-
-    slide.append(slideContent);
-    list.append(slide);
+    // item.innerHTML = '';
+    // item.append(button, panel);
   });
-
-  // 4. Assemble Splide and append to block
-  track.append(list);
-  splideEl.append(track);
-  block.append(splideEl);
-
-  // 5. Initialize Splide
-  new Splide(splideEl, {
-    type: 'loop',
-    perPage: 1,
-    pagination: true,
-    arrows: true,
-  }).mount();
 }

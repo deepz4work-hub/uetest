@@ -15,21 +15,27 @@ export default async function decorate(block) {
   const list = document.createElement('ul');
   list.className = 'splide__list';
 
-  const textContainer = document.createElement('div');
   rows.forEach((row) => {
     const picture = row.querySelector('picture, img');
-    const heading = document.createElement('h2');
-heading.textContent = row.children[0].textContent;
-
-const description = row.children[1].cloneNode(true);
-
-textContainer.append(heading, description);
-    
     if (!picture) return;
+
+    // ✅ Create per-slide container
+    const textContainer = document.createElement('div');
+    textContainer.className = 'singleslider__content';
+
+    // Heading
+    const heading = document.createElement('h2');
+    heading.textContent = row.children[0]?.textContent || '';
+
+    // Description
+    const description = row.children[1]?.cloneNode(true);
+
+    if (heading.textContent) textContainer.append(heading);
+    if (description) textContainer.append(description);
 
     const slide = document.createElement('li');
     slide.className = 'splide__slide singleslider__slide';
-console.log(textContainer);
+
     slide.append(picture.cloneNode(true), textContainer);
     list.append(slide);
   });

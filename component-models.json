@@ -280,6 +280,71 @@
     ]
   },
   {
+    "id": "textComponent",
+    "fields": [
+      {
+        "component": "text-input",
+        "name": "title",
+        "label": "Title",
+        "valueType": "string"
+      },
+      {
+        "component": "checkbox",
+        "name": "content",
+        "label": "Required",
+        "valueType": "boolean"
+      },
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "image",
+        "label": "Image",
+        "multi": false
+      },
+      {
+        "component": "select",
+        "name": "titleType",
+        "value": "h2",
+        "label": "Type",
+        "valueType": "string",
+        "options": [
+          {
+            "name": "Email",
+            "value": "email"
+          },
+          {
+            "name": "Text",
+            "value": "text"
+          },
+          {
+            "name": "Phno",
+            "value": "phno"
+          },
+          {
+            "name": "Pincode",
+            "value": "pincode"
+          },
+          {
+            "name": "Number",
+            "value": "number"
+          }
+        ]
+      },
+      {
+        "component": "text-input",
+        "name": "minLength",
+        "label": "Min Length",
+        "valueType": "number"
+      },
+      {
+        "component": "text-input",
+        "name": "maxLength",
+        "label": "Max Length",
+        "valueType": "number"
+      }
+    ]
+  },
+  {
     "id": "fragment",
     "fields": [
       {

@@ -20,7 +20,8 @@
       "drop-down-button",
       "video",
       "2columncomponant",
-      "singleslider"
+      "singleslider",
+      "formcomponent"
     ]
   },
   {
@@ -54,6 +55,12 @@
     "id": "drop-down-button",
     "components": [
       "drop-down-button-item"
+    ]
+  },
+  {
+    "id": "formcomponent",
+    "components": [
+      "textComponent"
     ]
   },
   {

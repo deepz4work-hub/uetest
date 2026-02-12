@@ -55,7 +55,8 @@
         "drop-down-button",
         "video",
         "2columncomponant",
-        "singleslider"
+        "singleslider",
+        "formcomponent"
       ]
     }
   ]

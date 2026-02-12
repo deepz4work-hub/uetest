@@ -6,16 +6,18 @@
 }
 .singleslider__content{
     position:absolute;
-    top:50%;
-    left:25%;
+    top:5%;
+    left:10%;
 }
 .singleslider__content h2{
-    color:red;
+    color:#000;
     font-size:3rem;
     font-weight: 800;
+    width:25%;
 }
 .singleslider__content p{
-    color:blue;
+    color:#fff;
     font-size:1.5rem;
     font-weight: 500;
+    width:50%;
 }

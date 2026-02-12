@@ -17,6 +17,7 @@ export default async function decorate(block) {
 
   rows.forEach((row) => {
     const picture = row.querySelector('picture, img');
+    console.log(picture);
     if (!picture) return;
 
     const slide = document.createElement('li');

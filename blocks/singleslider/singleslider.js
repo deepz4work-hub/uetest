@@ -22,7 +22,7 @@ export default async function decorate(block) {
 
     const description=row.children[1];
     textContainer.append(heading, description);
-    console.log(picture);
+    console.log(textContainer);
     if (!picture) return;
 
     const slide = document.createElement('li');
